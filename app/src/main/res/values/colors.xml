@@ -7,4 +7,7 @@
     <color name="btnMultiply">#575151</color>
     <color name="btnDivide">#feb062</color>
     <color name="background">#fafaf6</color>
+    <color name="second_background">#28c7fa</color>
+    <color name="answer_text">#002651</color>
+    <color name="back_button">#ff304f</color>
 </resources>

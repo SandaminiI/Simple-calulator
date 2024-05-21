@@ -8,4 +8,6 @@
     <string name="btn_Minus">-</string>
     <string name="btn_Multiply">x</string>
     <string name="btn_Divide">/</string>
+    <string name="answer">Answer</string>
+    <string name="btn_back">Back</string>
 </resources>
