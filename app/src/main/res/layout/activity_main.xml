@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/label_Number1"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintBottom_toTopOf="@+id/edtNumber1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,15 +30,15 @@
         android:layout_marginTop="24dp"
         android:text="@string/label_Number2"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+        app:layout_constraintBottom_toTopOf="@+id/edtNumber2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edtNumber1"
         app:layout_constraintVertical_bias="0.465" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edtNumber1"
         android:layout_width="372dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -47,14 +47,14 @@
         android:hint="@string/edt_Number1"
         android:inputType="number"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+        app:layout_constraintBottom_toTopOf="@+id/edtNumber2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.429" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/edtNumber2"
         android:layout_width="371dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -63,76 +63,80 @@
         android:hint="@string/edt_Number2"
         android:inputType="number"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edtNumber1"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnPlus"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:width="180sp"
         android:height="180sp"
-        app:backgroundTint="@color/btnPlus"
+        android:onClick="buttonClick"
         android:text="@string/btn_Plus"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:backgroundTint="@color/btnPlus"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultiply"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNumber2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnMinus"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:width="180sp"
         android:height="180sp"
-        app:backgroundTint="@color/btnMinus"
+        android:onClick="buttonClick"
         android:text="@string/btn_Minus"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:backgroundTint="@color/btnMinus"
+        app:layout_constraintBottom_toTopOf="@+id/btnDivide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintStart_toEndOf="@+id/btnPlus"
+        app:layout_constraintTop_toBottomOf="@+id/edtNumber2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnMultiply"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="180sp"
         android:height="180sp"
-        app:backgroundTint="@color/btnMultiply"
+        android:onClick="buttonClick"
         android:text="@string/btn_Multiply"
         android:textSize="34sp"
+        app:backgroundTint="@color/btnMultiply"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivide"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnDivide"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="180sp"
         android:height="180sp"
-        app:backgroundTint="@color/btnDivide"
+        android:onClick="buttonClick"
         android:text="@string/btn_Divide"
         android:textSize="34sp"
+        app:backgroundTint="@color/btnDivide"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btnMultiply"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
